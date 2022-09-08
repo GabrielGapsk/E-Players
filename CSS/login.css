@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*                            FONTES                               */
+
+@font-face {
+    font-family: "TitilliumWeb-Regular";
+    src: url(fonts/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(fonts/Roboto-Thin.ttf);
+}
+
+body {
+    background-color: black;
+}
+
+.container-personalizado {
+    background-image: url(../imagens/banner_pilotos.png);
+    background-repeat: no-repeat;
+    background-position: left;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.form-login {
+    background-color: rgba(41, 36, 36, 0.952);
+    width: 90%;
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 500px;
+}
+
+.form-login .linha {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-login .linha label {
+    margin-bottom: 7px;
+    font-family: "Roboto-light";
+    font-size: 20px;
+}
+
+.form-login .linha input {
+    border-radius: 10px;
+    height: 35px;
+    padding: 0 10px;
+}
+
+.form-login .btn-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-login .btn-actions button {
+    width: 48%;
+    background-color: red;
+    border-radius: 15px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-weight: bold;
+}

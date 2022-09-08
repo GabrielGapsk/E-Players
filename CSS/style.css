@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*                            FONTES                               */
+
+@font-face {
+    font-family: "TitilliumWeb-Regular";
+    src: url(fonts/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(fonts/Roboto-Thin.ttf);
+}
+
+/*                             css                                 */
+
+/*container grid para as imagens se ajustarem com a tela, margin para centralizar, max width para limitar a caixa horizontalmente*/
+.container-grid {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+/*CUSTOMIZAÇAO DO BOOTSTRAP
+.container, .container-grid, .container-fluid {
+    border: 1px solid red;
+}
+
+.mostra-coluna {
+    border: 1px solid black;
+}   */
+
+.container {
+    max-width: 1200px;
+}
+
+
+
+
+
+/*coloquei 3px de espaço em cima e ajustei em 80px o tamanho da imagem*/
+.logo {
+    padding-top: 3px;
+    height: 80px;
+}
+
+/*ajustei o tamanho vertical em 90px e cor de fundo preta*/
+header {
+    height: 80px;
+    background-color: black;
+}
+
+/*tamanho de 750px horizontal, espaçamento igual com o justify between*/
+header .menu {
+    width: 750px;
+    justify-content: space-between;
+    display: flex;
+    max-width: 680px;
+}
+
+/*cor de texto branca, sem decoração, transformou em maiuscula, definiu a fonte e o tamanho*/
+header .menu a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto-Light", sans-serif;
+    font-size: 20px;
+}
+
+header .menu-bar {
+    display: none;
+}
+
+/*                                BANNER                                 */
+
+/*width setou em 100% tamanho horizontal, height em 600px vertical, definiu a imagem de fundo e colocou para nao repetir*/
+.produtos {
+    width: 100%;
+    height: 600px;
+    background-image: url(imagens/banner_pilotos.png);
+    background-repeat: no-repeat;
+}
+
+/*estabeleceu o container grid, centralizou o conteudo dele no canto superior direito e depois no meio e estabeleceu o limite de 600px vertical*/
+.produtos .banner-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 600px;
+}
+
+/*criou um quadrado flexivel, colocou o conteudo da caixa no meio e no centro, colocou os itens em coluna, personalizou tamanho horizontal e vertical e setou cor branca*/
+.produtos .banner-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    width: 500px;
+    height: 270px;
+    color: white;
+}
+
+/*personalizou o titulo*/
+.produtos .banner-info h1 {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 60px;
+    text-align: center;
+}
+
+/*personalizou a escrita*/
+.produtos .banner-info p {
+    font-family: "Roboto-Light";
+    text-align: center;
+    font-size: 18px;
+}
+
+/*personalizou o botão de inscreva-se, flexivel, centralizado, font, tamanho, cor de fundo, arredondou a borda*/
+.produtos .banner-info a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Roboto-Light";
+
+    width: 200px;
+    height: 50px;
+
+    background-color: #C31616;
+    border-radius: 10px;
+    border: 1px solid #C31616;
+
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mostrarmenu {
+    left: 0 !important;
+    opacity: 0.98 !important;
+}
+
+/*============= JOGOS =================*/
+
+.jogos {
+    background-color: #1E1C21;
+}
+
+.jogos .ofertas {
+    color: white;
+    font-family: "Tittiliun-Web";
+    padding: 20px 0;
+}
+
+.jogos .card {
+    background-image: linear-gradient(to bottom, #1E1C21, #1e1c21f1);
+    color: white;
+    font-family: "Roboto-Light";
+    max-width: 250px;
+    margin-bottom: 25px;
+}
+
+.jogos .card .card-title {
+    font-family: "Roboto-Thin";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.jogos .card .btn-buy {
+    background-color: #C31616;
+    font-family: "Roboto-Light";
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+
+/*======================TABLET=======991px até 768=============*/
+
+@media screen and (max-width: 991px) {
+
+    header {
+        padding: 0 35px;
+    }
+
+    header .logo {
+        margin-left: 20px;
+    }
+
+    header .menu {
+        position: fixed;
+        top: 0;
+        left: -80%;
+        z-index: 100;
+
+        background-color: rgba(0, 0, 0, 0.945);
+
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        border-radius: 0 0 0 100px;
+
+        opacity: 0;
+        transition: left 0.5s, opacity 0.6s;
+
+    }
+
+    header .menu a {
+        color: white;
+        border-left: 2px dotted white;
+        font-size: 1.5rem;
+        width: 80%;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    header .menu-bar {
+        display: block;
+        width: 45px;
+    }
+
+}
+
+
+
+/*====================smartphones===========menor que 768 px  (0 até 767)*/
+
+@media screen and (max-width: 767px) {
+
+    header {
+        height: 60px;
+    }
+
+    header .logo {
+        width: 200px;
+        height: 65px;
+        margin: 0;
+        padding: 0;
+    }
+
+    header .menu a {
+        border-left: 2px dotted white;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    header .menu-bar {
+        width: 35px;
+    }
+
+
+    .produtos .banner-info h1 {
+        font-size: 55px;
+    }
+
+}
