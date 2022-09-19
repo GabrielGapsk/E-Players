@@ -18,10 +18,10 @@ $(document).ready(function () {
 
 
     function validarLogin(e, s) {
-        if( e !== "" && s != "" ){
-            return true;
-        } else {
+        if( e == "" || s == "" ){
             return false;
+        } else {
+            return true;
         }
     }
 
