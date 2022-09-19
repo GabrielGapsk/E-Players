@@ -9,17 +9,17 @@
 
 @font-face {
     font-family: "TitilliumWeb-Regular";
-    src: url(fonts/TitilliumWeb-Regular.ttf);
+    src: url(../fonts/TitilliumWeb-Regular.ttf);
 }
 
 @font-face {
     font-family: "Roboto-Light";
-    src: url(fonts/Roboto-Light.ttf);
+    src: url(../fonts/Roboto-Light.ttf);
 }
 
 @font-face {
     font-family: "Roboto-Thin";
-    src: url(fonts/Roboto-Thin.ttf);
+    src: url(../fonts/Roboto-Thin.ttf);
 }
 
 body {
